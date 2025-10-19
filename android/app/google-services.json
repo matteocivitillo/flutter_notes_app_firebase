@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "868915889927",
+    "project_id": "xdi-course",
+    "storage_bucket": "xdi-course.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868915889927:android:434d8d8bafb41832e867a2",
+        "android_client_info": {
+          "package_name": "com.example.flutter_notes_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuqpjgYnuqoOW24FrCWlQsXAp3Ak4yvq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
