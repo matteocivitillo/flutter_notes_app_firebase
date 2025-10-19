@@ -1,21 +1,21 @@
-# 📝 Flutter Notes App (con Firebase)
+# 📝 Flutter Notes App (with Firebase)
 
-Applicazione Flutter per prendere appunti, sviluppata come esercizio del corso **"Working with Firebase"**.  
-L'app permette di creare, visualizzare e cancellare note personali memorizzate su **Cloud Firestore**, mentre l'autenticazione è gestita tramite **Firebase Authentication** (login anonimo).
-
----
-
-## 🚀 Funzionalità
-
-- ✍️ Creare e cancellare note personali  
-- ☁️ Archiviazione cloud persistente con **Cloud Firestore**  
-- 👤 Login anonimo con **Firebase Authentication**  
-- 🔒 Regole di sicurezza Firestore per dati utente-specifici  
-- 🧩 Gestione dello stato con [GetX](https://pub.dev/packages/get)
+A Flutter note-taking application developed as part of the **"Working with Firebase"** exercise.  
+This app lets users create, view, and delete personal notes stored in **Cloud Firestore**, with user authentication handled via **Firebase Authentication** (anonymous sign-in).
 
 ---
 
-## 📂 Struttura del progetto
+## 🚀 Features
+
+- ✍️ Create and delete personal notes  
+- ☁️ Persistent cloud storage using **Cloud Firestore**  
+- 👤 Anonymous sign-in with **Firebase Authentication**  
+- 🔒 Firestore security rules that restrict access to user-specific data  
+- 🧩 State management with [GetX](https://pub.dev/packages/get)
+
+---
+
+## 📂 Project structure
 
 ```
 lib/
@@ -33,52 +33,51 @@ lib/
 
 ---
 
-## ⚙️ Come iniziare
+## ⚙️ Getting started
 
-### 1️⃣ Clona il repository
+### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/matteocivitillo/flutter_notes_app_firebase.git
 cd flutter_notes_app_firebase
 ```
 
-### 2️⃣ Installa le dipendenze
-
+### 2️⃣ Install dependencies
 ```bash
 flutter pub get
 ```
 
-### 3️⃣ Collega il progetto a Firebase
+### 3️⃣ Connect to Firebase
 
-Crea un progetto su [Firebase Console](https://console.firebase.google.com/) e collega la tua app Flutter seguendo la documentazione ufficiale:
+Create a project in the [Firebase console](https://console.firebase.google.com/) and link your Flutter app following the official guide:
 
-📘 [Aggiungere Firebase alla tua app Flutter](https://firebase.google.com/docs/flutter/setup)
+📘 [Add Firebase to your Flutter app](https://firebase.google.com/docs/flutter/setup)
 
-Poi esegui:
+Then run:
 
 ```bash
 flutterfire configure
 ```
 
-Questo genererà automaticamente:
+This will generate:
 
 ```
 lib/firebase_options.dart
 ```
 
-> ⚠️ Non includere credenziali reali in repository pubblici. Rimuovi chiavi private o sostituiscile con “REDACTED”.
+> ⚠️ Do NOT commit real credentials to public repositories. Remove private keys or replace them with “REDACTED”.
 
 ---
 
-## 🔥 Configurazione Firebase
+## 🔥 Firebase setup
 
 ### Cloud Firestore
 
-- Crea un database Firestore (per sviluppo puoi partire in **Test mode**).
-- Aggiungi una collection chiamata `notes` con almeno un documento di esempio (opzionale).
+- Create a Firestore database (for development you can start in **Test mode**).
+- Add a collection named `notes`; adding a sample document is optional.
 
-### Regole di sicurezza Firestore
+### Firestore security rules
 
-Per assicurare che ogni utente possa leggere/scrivere solo le proprie note, usa regole come:
+To ensure each user can only read/write their own notes, use rules like:
 
 ```js
 rules_version = '2';
@@ -94,20 +93,19 @@ service cloud.firestore {
 
 ---
 
-## 🧠 Tecnologie utilizzate
+## 🧠 Technologies used
 
-| Tecnologia          | Scopo                                     |
+| Technology          | Purpose                                   |
 | ------------------- | ----------------------------------------- |
-| **Flutter**         | Framework UI multipiattaforma             |
-| **GetX**            | State management e dependency injection   |
-| **Firebase Core**   | Inizializzazione di Firebase              |
-| **Cloud Firestore** | Database NoSQL cloud                       |
-| **Firebase Auth**   | Autenticazione anonima degli utenti       |
+| **Flutter**         | Cross-platform UI framework               |
+| **GetX**            | State management and dependency injection |
+| **Firebase Core**   | Firebase initialization                   |
+| **Cloud Firestore** | Cloud NoSQL database                      |
+| **Firebase Auth**   | Anonymous user authentication             |
 
 ---
 
+## 🏁 License
 
-## 🏁 Licenza
-
-Progetto sviluppato a scopo didattico.  
-© 2025 Matteo Civitillo — Tutti i diritti riservati.
+This project was created for educational purposes.  
+© 2025 Matteo Civitillo — All rights reserved.
